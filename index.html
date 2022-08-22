@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/main.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
+    <main>
+      <div class="header">
+        <div class="header-items container">
+          <h1>Rock Paper Scissors</h1>
+          <h3>Player score: <span id="score-player"> 0 </span> | Computer score: <span id="score-comp"> 0</span></h3>
+        </div>
+      </div>
+      <div class="choices container">
+        <div class="card">
+          <h1>🪨</h1>
+          <button class="btn choice" id="rock">Rock</button>
+        </div>
+
+        <div class="card">
+          <h1>📝</h1>
+          <button class="btn choice" id="paper">Paper</button>
+        </div>
+
+        <div class="card">
+          <h1>✂</h1>
+          <button class="btn choice" id="scissors">scissors</button>
+        </div>
+      </div>
+
+      <div class="status">
+        <p class="status-text">choose an option!</p>
+        <button class="btn play-again hidden">Play Again?</button>
+      </div>
+
+      <div class="score-panel">
+        <h3>Player score: <span id="score-player"> 0 </span> | Computer score: <span id="score-comp"> 0</span></h3>
+      </div>
+      <footer>
+        <p>©2022. Artillery design. All rights reserved</p>
+      </footer>
+    </main>
+
     <script src="rock.js"></script>
   </body>
 </html>

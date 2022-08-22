@@ -1,0 +1,170 @@
+@import "config";
+
+
+.container {
+    max-width: 1037px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: $color-status;
+    color: $color-text;
+    padding: 2rem;
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h1 {
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    h3{
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    .card {
+        width: 300px;
+        height: 300px;
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+
+
+
+
+        }
+    }
+    
+
+.btn {
+    background-color: $color-background;
+    width: 200px;
+    margin: 0 auto;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $color-text;
+    }
+}
+
+.disabled:hover {
+    background-color : $color-background !important;
+}
+
+.status {
+    width: 600px;
+    background-color: $color-status;
+    text-align: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.score-panel {
+    display: none;
+}
+
+footer {
+    background-color: $color-status;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    p{
+        font-size: .8rem;
+        font-weight: 200;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+    .header-items {
+        justify-content: center;
+        
+        
+        h1 {
+            display: none;
+        }
+    }
+
+    .choices {
+        flex-direction: column;
+
+        .card {
+            height: auto;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .status {
+        height: auto;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        background: linear-gradient(135deg, rgba(255, 223, 54, 1) 0%, rgba(106, 255, 148, 1) 100%);
+    }
+
+    .header {
+        opacity: 0;
+        padding: 0px;
+    }
+
+    .score-panel {
+        display: block;
+        height: 2rem;
+        background: $color-background;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+        font-weight: 200;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+
+    footer {
+        display: none;
+    }
+}
